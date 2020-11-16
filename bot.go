@@ -72,7 +72,7 @@ func main() {
 
 	//id последнего обновленния спроса
 	last_update:= 0
-	//last_update, _ := strconv.Atoi(string(fileGetContents("last_update.txt")))  
+	
 	
 	setInterval(func(){
 		//получаем данные по API - getUpdates
@@ -132,10 +132,6 @@ func main() {
 					//exec.Command("kill" ,"71849").Run()  
 
 				}() 
-			}
-
-			if (item.Message.Text == "создай файл") {  
-				exec.Command("touch" ,"anna.txt").Run()    	 
 			}
 			
 			last_update = item.UpdateID
